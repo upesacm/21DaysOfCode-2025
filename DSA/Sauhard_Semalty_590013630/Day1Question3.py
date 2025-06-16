@@ -25,7 +25,7 @@ def main() -> None:
     # Check if length is valid
     if n <= 0:
         print("Size must be greater 0.")
-        sys.exit(-2)
+        sys.exit(-1)
 
     nums: list[int] = []
 
@@ -35,7 +35,7 @@ def main() -> None:
             num = int(input("> "))
         except ValueError:
             print("Invalid value!")
-            sys.exit(-3)
+            sys.exit(-1)
 
         nums.append(num)
 
