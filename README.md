@@ -1,39 +1,60 @@
 
-<h2 align="center">Week 1 Day 1 (16/06/2025)</h2>
+<h2 align="center">Week 1 Day 2 (17/06/2025)</h2>
 
+## 1. Sum of All Even Numbers
+A problem that combines conditional logic with accumulation to filter and sum specific elements.
 
-## 1. Replace All Negative Numbers with Zero
-A basic array manipulation problem that introduces conditional element modification.
+Given an array of integers `nums` of size `n`, calculate and return the **sum of all even numbers** in the array.
 
-Given an array `nums` of size `n`, replace all negative numbers in the array with zero. Return the modified array.
+This problem combines **conditional logic** with **accumulation**, teaching you to filter elements based on specific criteria while performing mathematical operations on the filtered data.
 
-This problem introduces you to **array traversal** and **conditional modification of elements**, which are fundamental skills in array manipulation and data processing.
-
-**Your task:** Replace all negative numbers in the array with zero and return the modified array.
+**Your task:** Calculate and return the sum of all even numbers in the array.
 
 ### Examples
 
 **Input:**
 ```
-nums = [-1, 2, -3, 4, 5]
+nums = [1, 2, 3, 4, 5]
 ```
 **Output:**
 ```
-[0, 2, 0, 4, 5]
+6
 ```
 
 ---
 
 **Input:**
 ```
-nums = [0, -5, -10]
+nums = [10, 15, 20]
 ```
 **Output:**
 ```
-[0, 0, 0]
+30
 ```
 
 ---
+
+**Input:**
+```
+nums = [1, 3, 5]
+```
+**Output:**
+```
+0
+```
+
+---
+
+## 2. Find First and Last Element
+A problem that teaches array indexing and accessing elements at specific positions.
+
+Given an array `nums` of size `n`, return the **first element** and the **last element** of the array as a pair.
+
+This problem teaches you about **array indexing** and how to **access elements at specific positions**, which is fundamental for understanding array boundaries and element positioning.
+
+**Your task:** Return the first and last elements of the array.
+
+### Examples
 
 **Input:**
 ```
@@ -41,80 +62,72 @@ nums = [1, 2, 3, 4]
 ```
 **Output:**
 ```
-[1, 2, 3, 4]
+First: 1, Last: 4
 ```
 
 ---
 
-## 2. Missing and Repeated
-A problem that requires finding a missing number and a duplicate number in an array.
+**Input:**
+```
+nums = [7]
+```
+**Output:**
+```
+First: 7, Last: 7
+```
 
-Given an unsorted array of size `n`. Array elements are in the range of `1` to `n`. One number from set `{1, 2, ...n}` is **missing** and one number **occurs twice** in the array. The task is to find these two numbers.
+---
 
-**Your task:** Find the missing number and the number that appears twice in the array.
+**Input:**
+```
+nums = [5, 9, 2]
+```
+**Output:**
+```
+First: 5, Last: 2
+```
+
+---
+
+## 3. Check if Two Arrays are Equal
+A problem that introduces frequency counting and comparison techniques for data structure equality.
+
+Given two arrays, determine if both contain the **same elements with the same frequency**, regardless of their order. Return `true` if they are equal, else return `false`.
+
+This problem introduces you to **frequency counting** and **comparison techniques**, which are essential for understanding how to compare data structures and verify equality beyond simple element-by-element comparison.
+
+**Your task:** Determine if two arrays contain the same elements with the same frequencies.
 
 ### Examples
 
 **Input:**
 ```
-[3, 1, 3]
+nums1 = [1, 2, 3, 4], nums2 = [4, 3, 2, 1]
 ```
 **Output:**
 ```
-Missing: 2, Twice: 3
+true
+```
+
+
+---
+
+**Input:**
+```
+nums1 = [1, 2, 2, 3], nums2 = [1, 2, 3, 3]
+```
+**Output:**
+```
+false
 ```
 
 ---
 
 **Input:**
 ```
-[4, 3, 6, 2, 1, 1]
+nums1 = [1, 2, 3], nums2 = [1, 2, 3, 4]
 ```
 **Output:**
 ```
-Missing: 5, Twice: 1
-```
-
----
-
-## 3. Sum of Array Elements
-A fundamental array operation that calculates the total sum of all elements.
-
-Given an array of integers, write a program that calculates and returns the **sum of all elements** in the array.
-
-This is one of the most fundamental array operations where you need to **traverse through each element** and **accumulate their values**. This type of operation is commonly used in mathematical calculations and data analysis.
-
-**Your task:** Calculate and return the sum of all elements in the array.
-
-### Examples
-
-**Input:**
-```
-[1, 2, 3, 4, 5]
-```
-**Output:**
-```
-15
-```
-
----
-
-**Input:**
-```
-[10, 20, 30]
-```
-**Output:**
-```
-60
-```
-
----
-
-**Input:**
-```
-[7, 3, 9, 1, 6]
-```
-**Output:**
-```
-26
+false
 ```

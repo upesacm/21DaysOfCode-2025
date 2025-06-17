@@ -10,5 +10,5 @@ def main():
     sol = Solution()
     result = sol.ReplaceWithZero(arr)
     print(result)
-if __name__ == "_main_":
+if __name__ == "__main__":
     main()
