@@ -1,39 +1,45 @@
 
-<h2 align="center">Week 1 Day 1 (16/06/2025)</h2>
+<h2 align="center">Week 1 Day 3 (18/06/2025)</h2>
 
+## 1. K-Frequency Element Sum
+A problem that combines frequency counting with conditional summation of distinct elements.
 
-## 1. Replace All Negative Numbers with Zero
-A basic array manipulation problem that introduces conditional element modification.
+Given an array of integers and an integer `k`, find the **sum of all distinct elements** that appear exactly `k` times in the array. Each such element should be included only once in the sum.
 
-Given an array `nums` of size `n`, replace all negative numbers in the array with zero. Return the modified array.
-
-This problem introduces you to **array traversal** and **conditional modification of elements**, which are fundamental skills in array manipulation and data processing.
-
-**Your task:** Replace all negative numbers in the array with zero and return the modified array.
+**Your task:** Find the sum of all distinct elements that appear exactly k times in the array.
 
 ### Examples
 
 **Input:**
 ```
-nums = [-1, 2, -3, 4, 5]
+nums = [2, 3, 9, 9], k = 1
 ```
 **Output:**
 ```
-[0, 2, 0, 4, 5]
+5
 ```
-
 ---
 
 **Input:**
 ```
-nums = [0, -5, -10]
+nums = [1, 8, 8, 8, 5, 6, 2], k = 3
 ```
 **Output:**
 ```
-[0, 0, 0]
+8
 ```
-
 ---
+
+## 2. Check for Duplicates
+A problem that introduces duplicate detection algorithms and set-based thinking.
+
+Given an array `nums` of size `n`, return `true` if any value appears **more than once**, otherwise return `false`.
+
+This problem introduces you to **duplicate detection algorithms** and teaches you about **set-based thinking** and **comparison operations** within arrays.
+
+**Your task:** Return true if any value appears more than once, otherwise return false.
+
+### Examples
 
 **Input:**
 ```
@@ -41,80 +47,71 @@ nums = [1, 2, 3, 4]
 ```
 **Output:**
 ```
-[1, 2, 3, 4]
+false
 ```
 
 ---
 
-## 2. Missing and Repeated
-A problem that requires finding a missing number and a duplicate number in an array.
+**Input:**
+```
+nums = [1, 2, 3, 2]
+```
+**Output:**
+```
+true
+```
 
-Given an unsorted array of size `n`. Array elements are in the range of `1` to `n`. One number from set `{1, 2, ...n}` is **missing** and one number **occurs twice** in the array. The task is to find these two numbers.
+---
 
-**Your task:** Find the missing number and the number that appears twice in the array.
+**Input:**
+```
+nums = [5, 5, 5]
+```
+**Output:**
+```
+true
+```
+
+---
+
+## 3. Find the Second Largest Element
+A problem that teaches about finding extremes in data and handling edge cases.
+
+Given an array `nums` of size `n`, find the **second largest unique element** in the array. If it doesn't exist (e.g., all elements are the same), return `-1`.
+
+This problem teaches you about **finding extremes in data** and **handling edge cases** where the desired element might not exist.
+
+**Your task:** Find the second largest unique element in the array, or return -1 if it doesn't exist.
 
 ### Examples
 
 **Input:**
 ```
-[3, 1, 3]
+nums = [10, 20, 30, 40]
 ```
 **Output:**
 ```
-Missing: 2, Twice: 3
+30
 ```
 
 ---
 
 **Input:**
 ```
-[4, 3, 6, 2, 1, 1]
+nums = [5, 5, 5]
 ```
 **Output:**
 ```
-Missing: 5, Twice: 1
-```
-
----
-
-## 3. Sum of Array Elements
-A fundamental array operation that calculates the total sum of all elements.
-
-Given an array of integers, write a program that calculates and returns the **sum of all elements** in the array.
-
-This is one of the most fundamental array operations where you need to **traverse through each element** and **accumulate their values**. This type of operation is commonly used in mathematical calculations and data analysis.
-
-**Your task:** Calculate and return the sum of all elements in the array.
-
-### Examples
-
-**Input:**
-```
-[1, 2, 3, 4, 5]
-```
-**Output:**
-```
-15
+-1
 ```
 
 ---
 
 **Input:**
 ```
-[10, 20, 30]
+nums = [3, 2, 1]
 ```
 **Output:**
 ```
-60
-```
-
----
-
-**Input:**
-```
-[7, 3, 9, 1, 6]
-```
-**Output:**
-```
-26
+2
 ```

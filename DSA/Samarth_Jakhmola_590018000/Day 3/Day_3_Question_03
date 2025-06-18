@@ -1,0 +1,10 @@
+def second_largest(nums):
+    single_elements = list(set(nums))
+    if len(single_elements) < 2:
+        return -1
+    else:
+        single_elements.sort()
+        return single_elements[len(single_elements) - 2]
+    
+nums = list(map(int, input("Enter the elements of the array separated by spaces : ").split()))
+print(second_largest(nums))

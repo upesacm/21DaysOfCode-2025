@@ -14,7 +14,6 @@ def main() -> None:
     except ValueError:
         print("Invalid size!")
         sys.exit(-1)
-    # Check if length is valid
     if n <= 0:
         print("Size must be greater 0.")
         sys.exit(-1)
@@ -30,8 +29,6 @@ def main() -> None:
             print(f"Number must be between 1 and {n} (inclusive).")
             sys.exit(-1)
         nums.append(num)
-    # Assuming there is at max one missing number
-    # and one number that appeared twice
     missing, twice = find_missing_and_twice(nums)
     print(f"Missing: {missing}, Twice: {twice}")
 if __name__ == "__main__":

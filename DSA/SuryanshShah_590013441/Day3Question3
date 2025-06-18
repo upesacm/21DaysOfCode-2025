@@ -1,0 +1,30 @@
+import java.util.*
+public class Day1Question3{
+    public static void main(String[] args){
+    System.out.println("Enter the no. of elements in the aaray:")
+    Scanner scr=new Scanner(System.in);
+    int n=scr.nextInt();
+    int [] arr=new int[n];
+    int i;
+    System.out.println("Enter the elements into the array:");
+    for(i=0;i<n;i++)
+    {
+        arr[i]=scr.nextInt();
+    }
+    int max=arr[0],sl=arr[1];
+    for(i=0;i<n;i++)
+    {
+        if(arr[i]>max)
+        {
+            sl=max;
+            max=arr[i];
+        else if(arr[i] < max && arr[i] > sl)
+        {
+            sl=arr[i];
+        ]
+    }
+    if(sl==max)
+        System.out.println("-1");
+    else
+        System.out.println(sl);
+}

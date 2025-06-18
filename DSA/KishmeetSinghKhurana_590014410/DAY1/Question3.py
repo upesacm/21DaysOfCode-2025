@@ -15,7 +15,7 @@ def main() -> None:
         print("Size must be greater 0.")
         sys.exit(-1)
     nums: list[int] = []
-    print("+--Enter the values--+")
+    print("<--Enter the values-->")
     for _ in range(n):
         try:
             num = int(input("> "))

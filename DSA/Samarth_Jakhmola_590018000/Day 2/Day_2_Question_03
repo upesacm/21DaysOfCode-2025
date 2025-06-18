@@ -1,0 +1,20 @@
+def equality(nums1, nums2):
+    if len(nums1) == len(nums2):
+        nums1.sort()
+        nums2.sort()
+        for i in range(len(nums1)):
+            if nums1[i] == nums2[i]:
+                continue
+            else:
+                return 0
+                break
+        return 1
+    else:
+        return 0
+    
+nums1 = list(map(int, input("Enter the elements of the 1st array : ").split()))
+nums2 = list(map(int, input("Enter the elements of the 2st array : ").split()))
+if equality(nums1, nums2) == 1:
+    print("true")
+else:
+    print("false")
