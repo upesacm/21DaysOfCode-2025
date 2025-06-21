@@ -1,13 +1,19 @@
 import sys
 
 
-def missing_number_from_range(lst: list[int], n: int) -> int:
-    """Finds the missing element from the list containing
-    numbers from 0 to n."""
+def is_increasing_list(lst: list[int]) -> bool:
+    """Checks if each element is greater than
+    the previous element from the list."""
 
-    real_sum = n*(n + 1) // 2  # Arithmetic progression formula
+    if lst:
+        prev = lst[0]
+        for i in lst[1:]:
+            if i <= prev:
+                return False
 
-    return real_sum - sum(lst)
+            prev = i
+
+    return True
 
 
 def main() -> None:
@@ -26,7 +32,7 @@ def main() -> None:
 
     nums: list[int] = []
 
-    print(f"+--Enter the numbers between 0 to {n} with one missing--+")
+    print("+--Enter the values--+")
     for _ in range(n):
         try:
             num = int(input("> "))
@@ -36,7 +42,7 @@ def main() -> None:
 
         nums.append(num)
 
-    print(missing_number_from_range(nums, n))
+    print(str(is_increasing_list(nums)).lower())
 
 
 if __name__ == "__main__":

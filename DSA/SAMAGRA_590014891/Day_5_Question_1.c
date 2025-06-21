@@ -12,7 +12,7 @@ int singleNumber(int* nums, int numsSize) {
             return nums[i];
         }
     }
-    return -1; 
+    return -1;
 }
 
 int main() {

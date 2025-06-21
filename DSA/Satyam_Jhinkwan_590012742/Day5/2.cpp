@@ -7,7 +7,7 @@ int main()
     int n, actualSum = 0;
     cout << "Enter the size of array: ";
     cin >> n;
-    vector<int> arr(n), freq(n + 1, 0);
+    vector<int> arr(n);
     cout << "enter array elements (from 0 to " << n << "):" << endl;
     for (auto &x : arr)
     {

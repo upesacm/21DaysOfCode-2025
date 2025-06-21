@@ -1,13 +1,25 @@
 import sys
 
 
-def missing_number_from_range(lst: list[int], n: int) -> int:
-    """Finds the missing element from the list containing
-    numbers from 0 to n."""
+def longest_consecutive_chain(lst: list[int]) -> int:
+    """Find the length of the longest
+    consecutive increasing subarray."""
 
-    real_sum = n*(n + 1) // 2  # Arithmetic progression formula
+    longest_length = 1
 
-    return real_sum - sum(lst)
+    if lst:
+        length = 1
+        prev = lst[0]
+        for i in lst[1:]:
+            if i - prev == 1:
+                length += 1
+            else:
+                length = 1
+
+            longest_length = max(length, longest_length)
+            prev = i
+
+    return longest_length
 
 
 def main() -> None:
@@ -26,7 +38,7 @@ def main() -> None:
 
     nums: list[int] = []
 
-    print(f"+--Enter the numbers between 0 to {n} with one missing--+")
+    print("+--Enter the values--+")
     for _ in range(n):
         try:
             num = int(input("> "))
@@ -36,7 +48,7 @@ def main() -> None:
 
         nums.append(num)
 
-    print(missing_number_from_range(nums, n))
+    print(longest_consecutive_chain(nums))
 
 
 if __name__ == "__main__":

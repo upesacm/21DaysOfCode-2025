@@ -1,13 +1,13 @@
 import sys
 
 
-def missing_number_from_range(lst: list[int], n: int) -> int:
-    """Finds the missing element from the list containing
-    numbers from 0 to n."""
+def duplicate_number_from_range(lst: list[int], n: int) -> int:
+    """Finds the duplicate element from the list containing
+    numbers from 1 to n."""
 
     real_sum = n*(n + 1) // 2  # Arithmetic progression formula
 
-    return real_sum - sum(lst)
+    return sum(lst) - real_sum
 
 
 def main() -> None:
@@ -26,17 +26,21 @@ def main() -> None:
 
     nums: list[int] = []
 
-    print(f"+--Enter the numbers between 0 to {n} with one missing--+")
-    for _ in range(n):
+    print(f"+--Enter {n + 1} numbers between 1 to {n} with one duplicate--+")
+    for _ in range(n + 1):
         try:
             num = int(input("> "))
         except ValueError:
             print("Invalid value!")
             sys.exit(-1)
 
+        if not 0 <= num <= n:
+            print(f"Number must be between 0 and {n} (inclusive).")
+            sys.exit(-1)
+
         nums.append(num)
 
-    print(missing_number_from_range(nums, n))
+    print(duplicate_number_from_range(nums, n))
 
 
 if __name__ == "__main__":
