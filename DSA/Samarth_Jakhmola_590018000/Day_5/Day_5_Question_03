@@ -1,0 +1,9 @@
+def palindrome(nums):
+        reverse = list(nums[::-1])
+        if reverse == nums:
+            return True
+        else:
+            return False
+
+nums = list(map(int, input("Enter the elements of the array separated by spaces : ").split()))
+print(palindrome(nums))

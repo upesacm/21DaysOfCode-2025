@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+void findMissingAndRepeating(int arr[], int n) {
+    long long S = (long long)n * (n + 1) / 2;
+    long long P = (long long)n * (n + 1) * (2 * n + 1) / 6;
+
+    long long S1 = 0, P1 = 0;
+    for (int i = 0; i < n; i++) {
+        S1 += arr[i];
+        P1 += (long long)arr[i] * arr[i];
+    }
+
+    long long diff1 = S1 - S;         
+    long long diff2 = P1 - P;         
+
+    long long sum_xy = diff2 / diff1; 
+
+    int x = (int)((diff1 + sum_xy) / 2); 
+    int y = x - diff1;               
+
+    printf("Repeating Number: %d\n", x);
+    printf("Missing Number: %d\n", y);
+}
+
+int main() {
+    int arr[] = {4, 3, 6, 2, 1, 1};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    findMissingAndRepeating(arr, n);
+    return 0;
+}

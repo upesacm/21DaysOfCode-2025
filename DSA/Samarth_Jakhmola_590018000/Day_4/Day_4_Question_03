@@ -1,0 +1,7 @@
+def delete_all_occurences_of_element(nums, val):
+    nums = [x for x in nums if x != val]
+    return len(nums)
+
+nums = list(map(int, input("Enter the array elements separated by spaces : ").split()))
+val = int(input("Enter the value whose occurences are to be deleted : "))
+print(delete_all_occurences_of_element(nums, val)) 

@@ -1,0 +1,17 @@
+def missing_and_repeated(array):
+    count = [0] * (len(array) + 1)
+    missing = repeated = 0
+    
+    for i in array:
+        count[i] += 1
+        
+    for i in range(1, len(array) + 1):
+        if count[i] == 0:
+            missing = i
+        elif count[i] == 2:
+            repeated = i
+    return missing, repeated
+        
+array = list(map(int, input("Enter the elements of the array separated by spaces : ").split()))
+missing, repeated = missing_and_repeated(array)
+print(f"Missing: {missing}, Twice: {repeated}") 

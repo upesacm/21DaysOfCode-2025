@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdbool.h>
+
+#define SIZE 5 
+
+bool isPalindrome(int nums[], int n) {
+    for (int i = 0; i < n / 2; i++) {
+        if (nums[i] != nums[n - 1 - i]) {
+            return false; 
+        }
+    }
+    return true;
+}
+
+int main() {
+    int nums[SIZE];
+
+    printf("Enter %d elements:\n", SIZE);
+    for (int i = 0; i < SIZE; i++) {
+        scanf("%d", &nums[i]);
+    }
+
+    if (isPalindrome(nums, SIZE)) {
+        printf("The array is a palindrome.\n");
+    } else {
+        printf("The array is not a palindrome.\n");
+    }
+
+    return 0;
+}

@@ -1,0 +1,10 @@
+def check_array_increasing(nums):
+    for i in range(0,len(nums) - 1):
+        if nums[i] < nums[i+1]:
+            continue
+        else:
+            return False
+    return True
+
+nums = list(map(int, input("Enter the elements of the array separated by spaces : ").split()))
+print("true" if check_array_increasing(nums) == True else "false")

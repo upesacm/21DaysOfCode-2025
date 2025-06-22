@@ -1,0 +1,8 @@
+def replace(nums):
+    for i in range(len(nums)):
+        if nums[i] < 0:
+            nums[i] = 0
+    return nums
+
+nums = list(map(int, input("Enter the array elements separated by spaces : ").split()))
+print(replace(nums))

@@ -1,0 +1,8 @@
+def sum_elements(array):
+    sum = 0
+    for i in range(len(array)):
+        sum += array[i]
+    return sum
+
+array = list(map(int, input("Enter the array elements separated by spaces : ").split()))
+print(sum_elements(array))

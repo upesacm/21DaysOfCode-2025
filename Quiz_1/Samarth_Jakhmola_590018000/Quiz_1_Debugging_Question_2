@@ -1,0 +1,19 @@
+/* 1. The variable 'max' is not initialized and since the code is written in c, it may hold garbage value, meaning any random value because of 
+which the comparison statements and the overall highest element value stored in the variable 'max' may be incorrect.
+
+2. As I said, the function might return any incorrect value as the maximum element, even 0 or a negative number even if all the elements 
+in the array may be positive and the comparison statement maybe behave unpredictably as well.
+
+3. Corrected version : 
+
+int findMax(int arr[], int n) {
+    int max = arr[0];
+    for(int i = 1; i < n: i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+    return max;
+}
+
+*/

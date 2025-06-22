@@ -1,0 +1,5 @@
+a1 = list(map(int, input("Enter a list of numbers separated by spaces: ").split()))
+a2 = list(map(int, input("Enter another list of numbers separated by spaces: ").split()))
+sorted_a1 = sorted(a1)
+sorted_a2 = sorted(a2)
+print(sorted_a1 == sorted_a2)

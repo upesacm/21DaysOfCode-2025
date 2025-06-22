@@ -1,0 +1,10 @@
+def Minimum_Element(nums):
+    single_elements = list(set(nums))
+    if len(single_elements) < 2 :
+        return single_elements[0]
+    else:
+        single_elements.sort()
+        return single_elements[0]
+
+nums = list(map(int, input("Enter the elements of the array separated by spaces : ").split()))
+print(Minimum_Element(nums))        
