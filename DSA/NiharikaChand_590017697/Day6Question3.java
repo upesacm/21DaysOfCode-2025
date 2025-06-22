@@ -20,3 +20,5 @@ class Day6Question3
     System.out.println("Length of the longest contiguous subarray with consecutive increasing elements: " +c);
   }  
 }
+
+
