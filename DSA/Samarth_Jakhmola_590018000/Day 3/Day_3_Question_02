@@ -1,0 +1,15 @@
+def k_frequency_sum(nums):
+    frequency = {}
+    for number in nums:
+        if number in frequency:
+            frequency[number] += 1
+        else:
+            frequency[number] = 1
+
+    for num in frequency:
+        if frequency[num] > 1:
+            return 1
+    return 0    
+
+nums = list(map(int, input("Enter the elements of the array separated by spaces : ").split()))
+print("true" if k_frequency_sum(nums) == 1 else "false")

@@ -1,0 +1,19 @@
+def k_frequency_sum(nums, k):
+    frequency = {}
+    for number in nums:
+        if number in frequency:
+            frequency[number] += 1
+        else:
+            frequency[number] = 1
+
+    result = 0
+    for num in frequency:
+        if frequency[num] == k:
+            result += num
+
+    return result
+
+nums = list(map(int, input("Enter the elements of the array separated by spaces : ").split()))
+k = int(input("Enter the number of times a distinct element is to be counted for, i.e., the value of k  : "))
+
+print(k_frequency_sum(nums,k))

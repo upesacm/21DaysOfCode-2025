@@ -1,7 +1,5 @@
 import sys
 def replace_negatives(lst: list[int]) -> None:
-    "Replaces negative numbers with zeros in-place."
-
     for index, value in enumerate(lst):
         if value < 0:
             lst[index] = 0
@@ -24,7 +22,7 @@ def main() -> None:
             print("Invalid value!")
             sys.exit(-1)
         nums.append(num)
-    replace_negatives(nums)  # Replace negatives with zeros
+    replace_negatives(nums) 
     print("Output:", nums)
 if __name__ == "__main__":
     main()

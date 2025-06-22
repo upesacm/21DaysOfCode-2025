@@ -1,0 +1,8 @@
+def missing_number(nums):
+    nums.sort()
+    for i in range(0, len(nums)):
+        if i != nums[i]:
+            return i
+
+nums = list(map(int, input("Enter the array elements of the array separated by spaces : ").split()))
+print(missing_number(nums))

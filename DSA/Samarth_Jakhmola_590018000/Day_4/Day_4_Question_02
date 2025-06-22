@@ -1,0 +1,7 @@
+def rotate_k_times(nums, k):
+    k = k % len(nums)   # Handles the case where the value of k exceeds the value of the array itself.
+    return nums[-k:] + nums[:-k]
+
+nums = list(map(int, input("Enter the elements of the array separated by spaces : ").split()))
+k = int(input("Enter the number of steps by which you want to rotate the array, i.e., the value of k : "))
+print(rotate_k_times(nums, k))
