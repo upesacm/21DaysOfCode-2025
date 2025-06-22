@@ -1,0 +1,34 @@
+import java.util.*
+public class Day4Question2{
+    public static void main(String[] args){
+    System.out.println("Enter the no. of elements in the aaray:")
+    Scanner scr=new Scanner(System.in);
+    int n=scr.nextInt();
+    int [] array=new int[n];
+    int i;
+    System.out.println("Enter the elements into the array:");
+    for(i=0;i<n;i++)
+    {
+        array[i]=scr.nextInt();
+    }
+    System.out.println("Enter the no. of steps the array is to move to the right:");
+    int k=scr.nextInt();
+    if(k<array.length && k>=0)
+    {
+        int [] shift = new int[k];
+        for(i=0;i<k;i++)
+        {
+            shift[i]=array[i];
+        }
+        for(i=k;i<array.length-1;i++)
+        {    
+            array[i]=array[i+1];
+        }
+         for(i=array.length-k,int j=0;i<array.length,j<k;i++,j++)
+        {    
+            array[i]=shift[j];
+        }
+    }
+    else
+        System.out.println(k+"is greater than the size of the array");
+}

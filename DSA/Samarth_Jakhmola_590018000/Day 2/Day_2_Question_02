@@ -1,0 +1,6 @@
+def First_Last(nums):
+    return nums[0], nums[len(nums) - 1]
+
+nums = list(map(int, input("Enter the elements of the array : ").split()))
+First, Last = First_Last(nums)
+print(f"First: {First} , Last: {Last} ")

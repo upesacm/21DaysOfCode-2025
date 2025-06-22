@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+#define size 5 
+int findingMinimumvalue(int arr[], int n) {
+    if (n <= 0) {
+        return -1; 
+    }
+
+    int minimumvalue = arr[0]; 
+    for (int i = 1; i < n; i++){
+        if (arr[i] < minimumvalue){
+            minimumvalue = arr[i]; 
+        }
+    }
+    return minimumvalue;
+}
+
+int main() {
+    int arr[size]; 
+    int n = size; 
+
+ 
+    printf("%d enter elements:\n", size);
+    for (int i = 0; i < n; i++) {
+        printf("Element %d: ", i + 1);
+        scanf("%d", &arr[i]); 
+    }
+
+    int minimum = findingMinimumvalue(arr, n); 
+    if (minimum != -1) {
+        printf("The minimum element in the array is: %d\n", minimum);
+    } else {
+        printf("The array is empty.\n");
+    }
+
+    return 0;
+}

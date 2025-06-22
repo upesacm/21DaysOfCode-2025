@@ -1,0 +1,14 @@
+def Duplicate_in_array(nums):
+    frequency = {}
+    for num in nums:
+        if num in frequency:
+            frequency[num] += 1
+        else:
+            frequency[num] = 1
+    
+    for number in frequency:
+        if frequency[number] == 2:
+            return number
+
+nums = list(map(int, input("Enter the elements of the array separated by spaces : ").split()))
+print(Duplicate_in_array(nums))

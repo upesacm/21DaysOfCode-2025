@@ -1,0 +1,21 @@
+/* 1. The flaw of the function is that currentSum is initialized to 0, which means it may fail when all the elements are negative since 
+currentSum will keep getting reset to 0.    
+
+2. As I said above, it may fail when all the elements are negative since 
+currentSum will keep getting reset to 0.
+
+3. maxSum will store the value -3 which in this case is true but this may not be the case for other negative values.
+
+4. Correct version :
+
+int maxSubarraySum(int nums[], int n) {
+    int maxSum = nums[0];
+    int currentSum = nums[0];
+
+    for (int i = 1; i < n; i++) {
+        currentSum = (currentSum + nums[i] > nums[i]) ? currentSum + nums[i];
+        maxSum = (currentSum > maxSum) ? currentSum : maxSum;
+    }
+    return maxSum;
+}
+    */
