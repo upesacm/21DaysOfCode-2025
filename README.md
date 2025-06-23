@@ -1,139 +1,132 @@
 
-<h2 align="center">Week 1 Day 6 (21/06/2025)</h2>
+<h2 align="center"> Day 8 (23/06/2025)</h2>
 
-## 1. Find Duplicates in Array
-A problem that teaches duplicate detection using mathematical constraints and the pigeonhole principle.
+## 1. String Length and Basics
+A problem that introduces fundamental string operations including length calculation and case conversion.
 
-Given an integer array of `n+1` integers where each integer is between `1` and `n` (inclusive), find **one duplicate number** that appears in the array.
+Write a program that takes a string as input and returns its **length** (number of characters). Additionally, convert the string to **uppercase** and **lowercase**, and display both versions along with the original string.
 
-By the **pigeonhole principle**, at least one duplicate must exist since we have `n+1` numbers in the range `1` to `n`. This problem teaches you about **detecting duplicates** and **understanding mathematical constraints** in array problems.
+This problem helps you understand **basic string operations** that are fundamental to most string manipulation tasks in programming.
 
-**Your task:** Find one duplicate number that appears in the array.
+**Your task:** Calculate string length and convert to uppercase and lowercase formats.
 
 ### Examples
 
 **Input:**
 ```
-nums = [1, 3, 4, 2, 2]
+"Hello World"
+```
+**Output:**
+```
+Length: 11, Original: "Hello World", Uppercase: "HELLO WORLD", Lowercase: "hello world"
+```
+
+---
+
+**Input:**
+```
+"Python"
+```
+**Output:**
+```
+Length: 6, Original: "Python", Uppercase: "PYTHON", Lowercase: "python"
+```
+
+---
+
+**Input:**
+```
+"Programming123"
+```
+**Output:**
+```
+Length: 13, Original: "Programming123", Uppercase: "PROGRAMMING123", Lowercase: "programming123"
+```
+
+---
+
+## 2. Character Count
+A problem that teaches character frequency counting with case-sensitive matching.
+
+Given a string and a specific character, write a program that counts how many times that character appears in the string. The search should be **case sensitive**, meaning `'A'` and `'a'` are considered different characters.
+
+This type of **character frequency counting** is useful in text analysis, data processing, and many string algorithms.
+
+**Your task:** Count the occurrences of a specific character in a string (case sensitive).
+
+### Examples
+
+**Input:**
+```
+String: "programming", Character: 'r'
 ```
 **Output:**
 ```
 2
 ```
-**Explanation:** The number 2 appears twice in the array
 
 ---
 
 **Input:**
 ```
-nums = [3, 1, 3, 4, 2]
+String: "Hello World", Character: 'l'
 ```
 **Output:**
 ```
 3
 ```
-**Explanation:** The number 3 appears twice in the array
 
 ---
 
 **Input:**
 ```
-nums = [1, 1, 2]
+String: "JavaScript", Character: 'a'
 ```
 **Output:**
 ```
-1
+2
 ```
-**Explanation:** The number 1 appears twice in the array
 
 ---
 
-## 2. Check if Array is Fully Increasing
-A problem that teaches sequence validation and introduces monotonic array concepts.
+## 3. Reverse a String
+A fundamental string manipulation problem that teaches character indexing and reversal techniques.
 
-Given an array of integers `nums`, return `true` if each number is **strictly greater** than the one before it. Otherwise, return `false`.
+Write a function that takes a string as input and returns the string with **all characters in reverse order**. For example, if the input is `"hello"`, the output should be `"olleh"`.
 
-**Note:** The array must strictly increase - no equal numbers allowed.
+This is a **fundamental string manipulation problem** that helps you understand how to work with **string indexing** and **character manipulation**.
 
-This problem teaches you about **sequence validation** and introduces concepts of **monotonic arrays** that are important in many algorithmic applications.
-
-**Your task:** Return true if the array is strictly increasing, otherwise return false.
+**Your task:** Return the string with all characters in reverse order.
 
 ### Examples
 
 **Input:**
 ```
-nums = [1, 2, 3, 4]
+"hello"
 ```
 **Output:**
 ```
-true
+"olleh"
 ```
 
 ---
 
 **Input:**
 ```
-nums = [1, 2, 2, 3]
+"world"
 ```
 **Output:**
 ```
-false
+"dlrow"
 ```
 
 ---
 
 **Input:**
 ```
-nums = [5, 4, 3]
+"12345"
 ```
 **Output:**
 ```
-false
+"54321"
 ```
-
----
-
-## 3. Find the Length of the Longest Consecutive Increasing Subarray
-A problem that introduces subarray analysis and consecutive pattern tracking.
-
-Given an array `nums` of size `n`, find the **length of the longest contiguous subarray** where each element is strictly greater than the previous one (by 1).
-
-This problem introduces you to **subarray analysis** and teaches you about **tracking consecutive patterns**, which is fundamental for sequence analysis and dynamic programming approaches.
-
-**Your task:** Find the length of the longest contiguous subarray with consecutive increasing elements.
-
-### Examples
-
-**Input:**
-```
-nums = [1, 2, 2, 3, 4, 1, 2, 3, 4, 5]
-```
-**Output:**
-```
-5
-```
-**(subarray: [1, 2, 3, 4, 5])**
-
----
-
-**Input:**
-```
-nums = [5, 4, 3, 2]
-```
-**Output:**
-```
-1
-```
-
----
-
-**Input:**
-```
-nums = [1, 2, 3, 5, 6, 7]
-```
-**Output:**
-```
-3
-```
-**(subarray: [5, 6, 7])**
