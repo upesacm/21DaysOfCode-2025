@@ -1,5 +1,4 @@
 import sys
-import json
 
 
 def main() -> None:
@@ -14,9 +13,8 @@ def main() -> None:
     uppercase = string.upper()
     length = len(string)
 
-    # `repr` may produce different quotes, so `json.dumps` is used here
-    print(f"Length: {length}, Original: {json.dumps(string)}, "
-          f"Uppercase: {json.dumps(uppercase)}, Lowercase: {json.dumps(lowercase)}")
+    print(f"Length: {length}, Original: {string!r}, "
+          f"Uppercase: {uppercase!r}, Lowercase: {lowercase!r}")
 
 
 if __name__ == "__main__":
