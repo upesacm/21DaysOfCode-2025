@@ -1,0 +1,5 @@
+user = input("Enter a string: ")
+print("Length: ", len(user))
+print("Origional: ", user)
+print("Uppercase: ", user.upper())
+print("Lowercase: ", user.lower())
