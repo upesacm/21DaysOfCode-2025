@@ -1,0 +1,12 @@
+s = input("Enter a sentence: ")
+
+w = s.split()
+c = len(w)
+l = ""
+
+for word in w:
+    if len(word) > len(l):
+        l = word
+
+print("Word count:", c)
+print("Longest word:", l)
