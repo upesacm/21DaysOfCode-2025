@@ -6,10 +6,4 @@ def is_digits_only(s):
             return False
     return True
 
-# Test cases
-print(is_digits_only("123"))    #  Output: True
-print(is_digits_only(""))       #  Output: False (Corrected behavior)
-print(is_digits_only("12a3"))   #  Output: False
-print(is_digits_only("007"))    #  Output: True
-
 # Answer: A) Empty string should return False since it contains no digits
