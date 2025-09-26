@@ -29,7 +29,7 @@ This challenge served as your introduction to competitive programming and algori
 **Get ready for the next challenge: 100 Days of Code!**
 
 The upcoming 100 DoC will dive deeper into advanced topics including:
-- Advanced Data Structures (Trees, Graphs, Heaps, Tries)
+- Advanced Data Structures (Trees, Graphs, Heaps)
 - Complex Algorithms (Dynamic Programming, Advanced Graph Algorithms)
 - Optimization Techniques and Advanced Problem Solving
 - Comprehensive Technical Interview Preparation
